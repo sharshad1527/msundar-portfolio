@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M. Sundar | Senior IT Infrastructure Professional</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230f172a'/%3E%3Ctext x='50' y='68' font-family='sans-serif' font-size='55' font-weight='bold' fill='%2306b6d4' text-anchor='middle'%3EMS%3C/text%3E%3C/svg%3E">
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -48,6 +50,34 @@
             background: linear-gradient(to right, #06b6d4, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        /* Scroll-reveal animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* Back to top button */
+        #back-to-top {
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s, transform 0.3s;
+            transform: translateY(10px);
+        }
+        #back-to-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -155,10 +185,47 @@
         </div>
     </section>
 
+    <!-- Stats Counter -->
+    <section class="py-16 border-y border-slate-800 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Stat 1 -->
+                <div class="text-center reveal">
+                    <div class="text-4xl sm:text-5xl font-heading font-bold text-white mb-2">
+                        <span class="counter" data-target="15">0</span><span class="text-brand-accent">+</span>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Years Experience</p>
+                </div>
+                <!-- Stat 2 -->
+                <div class="text-center reveal reveal-delay-1">
+                    <div class="text-4xl sm:text-5xl font-heading font-bold text-white mb-2">
+                        <span class="counter" data-target="16">0</span><span class="text-blue-400">+</span>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Engineers Led</p>
+                </div>
+                <!-- Stat 3 -->
+                <div class="text-center reveal reveal-delay-2">
+                    <div class="text-4xl sm:text-5xl font-heading font-bold text-white mb-2">
+                        <span class="counter" data-target="5">0</span><span class="text-purple-400">+</span>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Certifications</p>
+                </div>
+                <!-- Stat 4 -->
+                <div class="text-center reveal reveal-delay-3">
+                    <div class="text-4xl sm:text-5xl font-heading font-bold text-white mb-2">
+                        <span class="counter" data-target="6">0</span><span class="text-emerald-400">+</span>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium uppercase tracking-wider">Organizations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Matrix -->
     <section id="skills" class="scroll-mt-32 py-20 bg-brand-dark/50 border-y border-slate-800 relative">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
+            <div class="text-center mb-16 reveal">
                 <h2 class="text-3xl font-heading font-bold text-white mb-4">Core Expertise</h2>
                 <p class="text-slate-400 max-w-2xl mx-auto">A comprehensive technical foundation built over a decade of
                     hands-on data center and systems management.</p>
@@ -166,7 +233,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Skill Card 1 -->
-                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 reveal">
                     <div
                         class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4 text-brand-accent border border-cyan-500/20">
                         <i data-lucide="server" class="w-6 h-6"></i>
@@ -185,7 +252,7 @@
                 </div>
 
                 <!-- Skill Card 2 -->
-                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 reveal reveal-delay-1">
                     <div
                         class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-400 border border-blue-500/20">
                         <i data-lucide="monitor" class="w-6 h-6"></i>
@@ -204,7 +271,7 @@
                 </div>
 
                 <!-- Skill Card 3 -->
-                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 reveal reveal-delay-2">
                     <div
                         class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 text-purple-400 border border-purple-500/20">
                         <i data-lucide="cloud" class="w-6 h-6"></i>
@@ -223,7 +290,7 @@
                 </div>
 
                 <!-- Skill Card 4 -->
-                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 reveal reveal-delay-3">
                     <div
                         class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4 text-emerald-400 border border-emerald-500/20">
                         <i data-lucide="users" class="w-6 h-6"></i>
@@ -246,7 +313,7 @@
 
     <!-- Experience Timeline -->
     <section id="experience" class="scroll-mt-32 py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-        <div class="text-center mb-16">
+        <div class="text-center mb-16 reveal">
             <h2 class="text-3xl font-heading font-bold text-white mb-4">Career Journey</h2>
             <p class="text-slate-400">A track record of scaling infrastructure and leading technical operations.</p>
         </div>
@@ -506,6 +573,12 @@
         </div>
     </section>
 
+    <!-- Back to Top Button -->
+    <button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        class="fixed bottom-8 right-8 z-50 w-12 h-12 bg-brand-accent text-slate-900 rounded-full shadow-lg shadow-cyan-500/25 flex items-center justify-center hover:bg-cyan-400 hover:scale-110 transition-all">
+        <i data-lucide="arrow-up" class="w-5 h-5"></i>
+    </button>
+
     <!-- Footer -->
     <footer class="border-t border-slate-800 bg-slate-900 py-8 relative z-10">
         <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
@@ -526,7 +599,56 @@
         // Set current year in footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Active Navigation Highlight
+        // ── Scroll Reveal Animations ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    revealObserver.unobserve(entry.target); // only animate once
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── Animated Stats Counter ──
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    const target = +counter.getAttribute('data-target');
+                    const duration = 2000; // ms
+                    const start = performance.now();
+
+                    function tick(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        // ease-out cubic
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        counter.textContent = Math.floor(eased * target);
+                        if (progress < 1) requestAnimationFrame(tick);
+                        else counter.textContent = target;
+                    }
+
+                    requestAnimationFrame(tick);
+                    counterObserver.unobserve(counter);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+        // ── Back to Top Button ──
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        // ── Active Navigation Highlight ──
         document.addEventListener('DOMContentLoaded', () => {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -542,7 +664,6 @@
                     if (href === activeId) {
                         // Position indicator
                         indicator.style.width = `${link.offsetWidth}px`;
-                        // Need to calculate position relative to the navMenu container
                         const leftPos = link.offsetLeft;
                         indicator.style.transform = `translateX(${leftPos}px)`;
                         indicator.style.opacity = '1';
@@ -555,45 +676,33 @@
                         link.classList.remove('text-slate-900', 'font-bold');
                         
                         if (href === 'contact') {
-                            // Restore contact button special styling
                             link.classList.add('bg-brand-accent/10', 'text-brand-accent', 'border', 'border-brand-accent/50', 'hover:bg-brand-accent', 'hover:text-white');
                         } else {
-                            // Restore normal link styling
                             link.classList.add('text-slate-300', 'hover:text-brand-accent');
                         }
                     }
                 });
             }
 
-            const observerOptions = {
-                root: null,
-                // Offset triggers slightly above the middle of screen for better flow
-                rootMargin: '-20% 0px -70% 0px',
-                threshold: 0
-            };
-
-            const observer = new IntersectionObserver((entries) => {
+            const navObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         updateNav(entry.target.getAttribute('id'));
                     }
                 });
-            }, observerOptions);
+            }, { root: null, rootMargin: '-20% 0px -70% 0px', threshold: 0 });
 
-            sections.forEach(section => observer.observe(section));
+            sections.forEach(section => navObserver.observe(section));
 
             // Initial positioning on load
             setTimeout(() => {
                 const scrollY = window.scrollY;
                 let currentSection = sections[0].getAttribute('id');
-                
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (scrollY >= sectionTop - window.innerHeight / 3) {
+                    if (scrollY >= section.offsetTop - window.innerHeight / 3) {
                         currentSection = section.getAttribute('id');
                     }
                 });
-                
                 updateNav(currentSection);
             }, 100);
             
@@ -601,8 +710,7 @@
             window.addEventListener('resize', () => {
                 const activeLink = document.querySelector('.nav-link.text-slate-900');
                 if (activeLink) {
-                    const activeId = activeLink.getAttribute('href').substring(1);
-                    updateNav(activeId);
+                    updateNav(activeLink.getAttribute('href').substring(1));
                 }
             });
         });

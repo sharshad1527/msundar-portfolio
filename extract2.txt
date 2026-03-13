@@ -1,0 +1,88 @@
+M. SUNDAR 
+ 1980-03-15 |  Indian |   +91 98415 15380 |   msundar80@gmail.com | 
+ Z4560501 
+  Chennai, India  |   LinkedIn: linkedin.com/in/sundar-am 
+Career Objective 
+Experienced IT professional with over 15 years in Server, Storage, and Infrastructure 
+support. Skilled in Linux, Windows Server, VMware, and hardware maintenance. Actively 
+transitioning into Linux Administration and Cloud (AWS) roles. Eager to contribute to modern IT 
+infrastructure teams with strong hands-on expertise and dedication to continuous learning. 
+Core Skills 
+• OS Platforms: Linux (RHEL, CentOS), Windows Server, VMware ESXi 
+• Server & Storage: HP ProLiant, Dell PowerEdge, Blade Enclosures (C3000, C7000) 
+• Cloud: AWS (EC2, S3, IAM – in progress) 
+• Automation: Bash scripting, Ansible (learning) 
+• Tools: Git, ILO, RAID, Network configuration 
+• Soft Skills: Team Leadership, Technical Support, Client Coordination 
+Professional Experience 
+• 
+MIS Head & IT Trainer 
+• 
+Sri Nandhini Community College (DDU-GKY Project) | Feb 2021 – Present 
+• 
+• Managed MIS systems and data quality for Government-sponsored projects 
+• 
+• Led training on basic IT tools and systems; mentored junior staff 
+• 
+• Oversaw upgrades and integration of MIS platforms 
+ 
+• 
+Operations Manager 
+• 
+Hi-Tech Informatics Pvt Ltd (Client: HP Enterprise), Chennai | Feb 2017 – Sep 2020 
+• 
+• Managed support operations for HP servers across South India 
+• 
+• Supervised SLA compliance, escalations, and customer satisfaction 
+• 
+• Conducted team training on new hardware and technologies 
+ 
+• 
+Team Leader – Enterprise Support 
+• 
+Sysnet Global Technologies (Client: HP), Chennai | Mar 2016 – Feb 2017 
+• 
+• Led 16 engineers handling server and storage calls across Tamil Nadu 
+• 
+• Provided L2/L3 support and resolved escalated issues 
+
+• 
+Senior Customer Support Engineer 
+• 
+Maha Electronics Pvt Ltd (Client: IIP Enterprise), Chennai | Jul 2015 – Feb 2016 
+• 
+• Installed and configured HP Blade Enclosures (C3000/C7000) 
+• 
+• Performed OS deployments via ILO and configured IRS alerts 
+ 
+• 
+Enterprise Support Engineer 
+• 
+Nebula Computers Pvt Ltd (Client: Wipro – Dell), Chennai | Dec 2009 – Jul 2015 
+• 
+• Supported Dell enterprise servers and storages onsite 
+• 
+• Installed and maintained Linux, VMware ESXi, and Windows Servers 
+• 
+• Configured RAID levels, NIC teaming, and failover 
+ 
+• 
+Service Engineer 
+• 
+Alpha Hardware and Networking Solutions, Vellore | Jun 2006 – Nov 2009 
+• 
+• Desktop/Laptop/Printer installations and network troubleshooting 
+• 
+• Supported Windows OS installations and wireless networks 
+Certifications 
+• Dell Certified Systems Expert (DCSE) 
+• Microsoft Certified Professional – Windows XP 
+• ACCEL Certified Windows 2003 System Engineer 
+• HP Certified Professional 
+• Advanced Diploma in Computer Maintenance & Network Admin 
+Education 
+• Diploma in Computer Technology – Dr. MGR Polytechnic College, Arni – 2000 (First Class) 
+• HSC & SSLC – Govt. Boys Higher Sec School, Arani – 1995 & 1997 
+Languages 
+• Tamil   – R/W/S 
+• English – R/W/S 
