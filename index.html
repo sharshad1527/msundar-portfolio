@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M. Sundar | Senior IT Infrastructure Professional</title>
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',    // Slate 900
+                            card: '#1e293b',    // Slate 800
+                            accent: '#06b6d4',  // Cyan 500 (Server LED vibe)
+                            light: '#e2e8f0',   // Slate 200
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Glassmorphism utilities */
+        .glass {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Gradient text */
+        .text-gradient {
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-brand-dark text-brand-light font-sans antialiased selection:bg-brand-accent selection:text-white relative overflow-x-hidden">
+
+    <!-- Ambient Background Effects -->
+    <div
+        class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800/30 via-brand-dark to-brand-dark">
+    </div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-20 pointer-events-none"
+        style="background: radial-gradient(circle, rgba(6,182,212,0.15) 0%, rgba(15,23,42,0) 70%);"></div>
+
+    <!-- Navigation (Floating Pill) -->
+    <nav
+        class="fixed top-6 left-1/2 -translate-x-1/2 z-50 glass border border-white/10 rounded-full px-2 py-2 w-[95%] max-w-3xl shadow-2xl transition-all duration-300">
+        <div class="flex items-center justify-between">
+            <div class="flex-shrink-0 pl-4">
+                <span class="font-heading font-bold text-lg tracking-wider text-white">M. SUNDAR</span>
+            </div>
+            <div class="hidden md:block pr-2">
+                <div class="flex items-center space-x-1 relative" id="nav-menu">
+                    <!-- Magic floating indicator pill -->
+                    <div id="nav-indicator" class="absolute top-0 bottom-0 bg-brand-accent rounded-full transition-all duration-300 ease-out z-0 opacity-0 shadow-[0_0_15px_rgba(6,182,212,0.4)]"></div>
+                    
+                    <a href="#about"
+                        class="nav-link relative z-10 hover:text-brand-accent transition-colors duration-300 px-4 py-2 rounded-full text-sm font-medium text-slate-300">About</a>
+                    <a href="#skills"
+                        class="nav-link relative z-10 hover:text-brand-accent transition-colors duration-300 px-4 py-2 rounded-full text-sm font-medium text-slate-300">Expertise</a>
+                    <a href="#experience"
+                        class="nav-link relative z-10 hover:text-brand-accent transition-colors duration-300 px-4 py-2 rounded-full text-sm font-medium text-slate-300">Experience</a>
+                    <a href="#contact"
+                        class="nav-link relative z-10 bg-brand-accent/10 text-brand-accent border border-brand-accent/50 hover:bg-brand-accent hover:text-white transition-colors duration-300 px-5 py-2 rounded-full text-sm font-medium ml-2">Contact</a>
+                </div>
+            </div>
+            <!-- Mobile Menu Icon Placeholder -->
+            <div class="md:hidden pr-4 text-white">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="about"
+        class="scroll-mt-32 pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center gap-12 min-h-[90vh] justify-center">
+        <div class="flex-1 space-y-6 text-center md:text-left">
+            <div
+                class="inline-flex items-center space-x-2 bg-brand-card rounded-full px-4 py-1.5 border border-slate-700">
+                <span class="relative flex h-3 w-3">
+                    <span
+                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-brand-accent"></span>
+                </span>
+                <span class="text-sm text-slate-300">Available for Cloud & Infrastructure Roles</span>
+            </div>
+
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold leading-tight text-white">
+                Senior IT Infrastructure & <br /> <span class="text-gradient">Operations Professional</span>
+            </h1>
+
+            <p class="text-lg text-slate-400 max-w-2xl leading-relaxed">
+                15+ years of experience bridging bare metal to the cloud. From configuring enterprise HP/Dell blade
+                servers and leading 16-engineer technical teams, to architecting modern IT infrastructure with Linux,
+                VMware, and AWS.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4">
+                <a href="#experience"
+                    class="bg-brand-accent text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-cyan-400 transition-colors shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-2">
+                    <i data-lucide="line-chart" class="w-5 h-5"></i> Explore Career Path
+                </a>
+                <a href="#contact"
+                    class="glass text-white px-8 py-3 rounded-lg font-medium hover:bg-slate-700 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="download" class="w-5 h-5"></i> Download Resume
+                </a>
+            </div>
+        </div>
+
+        <!-- Hero Image Placeholder (Hardware Theme) -->
+        <div class="flex-shrink-0 relative">
+            <div
+                class="absolute inset-0 bg-gradient-to-tr from-brand-accent to-blue-500 rounded-full blur-2xl opacity-20 animate-pulse">
+            </div>
+
+            <div
+                class="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full border-4 border-slate-800 shadow-2xl z-10 bg-slate-900 flex items-center justify-center overflow-hidden">
+                <!-- Subtle grid background inside the circle -->
+                <div class="absolute inset-0 opacity-20"
+                    style="background-image: radial-gradient(#06b6d4 1px, transparent 1px); background-size: 16px 16px;">
+                </div>
+
+                <!-- Rotating dashed ring -->
+                <div
+                    class="absolute inset-2 border-2 border-brand-accent/30 rounded-full animate-[spin_15s_linear_infinite] border-dashed">
+                </div>
+                <div
+                    class="absolute inset-6 border border-blue-500/20 rounded-full animate-[spin_20s_linear_infinite_reverse] border-dotted">
+                </div>
+
+                <!-- Center CPU Icon -->
+                <i data-lucide="cpu"
+                    class="w-24 h-24 sm:w-32 sm:h-32 text-brand-accent drop-shadow-[0_0_15px_rgba(6,182,212,0.8)] relative z-20"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Matrix -->
+    <section id="skills" class="scroll-mt-32 py-20 bg-brand-dark/50 border-y border-slate-800 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-heading font-bold text-white mb-4">Core Expertise</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto">A comprehensive technical foundation built over a decade of
+                    hands-on data center and systems management.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skill Card 1 -->
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4 text-brand-accent border border-cyan-500/20">
+                        <i data-lucide="server" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Enterprise Hardware</h3>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-brand-accent"></i> HP ProLiant & Blade (C3000/C7000)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-brand-accent"></i> Dell PowerEdge Servers</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-brand-accent"></i> Hardware RAID Configuration</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-brand-accent"></i> ILO & Remote Management</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 2 -->
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-4 text-blue-400 border border-blue-500/20">
+                        <i data-lucide="monitor" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">OS & Virtualization</h3>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-blue-400"></i> Linux (RHEL, CentOS)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-blue-400"></i> Windows Server Environment</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-blue-400"></i> VMware ESXi Setup</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-blue-400"></i> OS Deployments & Networking</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 3 -->
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center mb-4 text-purple-400 border border-purple-500/20">
+                        <i data-lucide="cloud" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Cloud & Automation</h3>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-purple-400"></i> AWS (EC2, S3, IAM)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-purple-400"></i> Bash Scripting</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-purple-400"></i> Git Version Control</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-purple-400"></i> Ansible (In Progress)</li>
+                    </ul>
+                </div>
+
+                <!-- Skill Card 4 -->
+                <div class="glass p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300">
+                    <div
+                        class="w-12 h-12 bg-emerald-500/10 rounded-lg flex items-center justify-center mb-4 text-emerald-400 border border-emerald-500/20">
+                        <i data-lucide="users" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Operations Leadership</h3>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-400"></i> L2/L3 Escalation Management</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-400"></i> SLA Compliance</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-400"></i> Team Leadership (15+ Engineers)</li>
+                        <li class="flex items-center gap-2"><i data-lucide="check-circle-2"
+                                class="w-4 h-4 text-emerald-400"></i> IT Training & Mentorship</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section id="experience" class="scroll-mt-32 py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-heading font-bold text-white mb-4">Career Journey</h2>
+            <p class="text-slate-400">A track record of scaling infrastructure and leading technical operations.</p>
+        </div>
+
+        <div
+            class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-1 before:bg-gradient-to-b before:from-brand-accent/50 before:via-slate-700 before:to-transparent">
+
+            <!-- Era 3 -->
+            <div
+                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active hover:-translate-y-1 transition-transform duration-300">
+                <div
+                    class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-brand-accent bg-slate-900 text-brand-accent shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow-[0_0_15px_rgba(6,182,212,0.5)] z-10 group-hover:scale-110 transition-transform">
+                    <i data-lucide="network" class="w-5 h-5"></i>
+                </div>
+                <div
+                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass p-6 rounded-2xl border border-slate-700 group-hover:border-brand-accent/30 group-hover:shadow-[0_0_30px_rgba(6,182,212,0.1)] transition-all">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h3 class="font-bold text-xl text-white">MIS Head & IT Trainer</h3>
+                        <span class="text-brand-accent text-sm font-semibold">2021 – Present</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4 text-sm">Sri Nandhini Community College (DDU-GKY Project)
+                    </p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Managing complex MIS systems and ensuring data integrity for government-sponsored projects.
+                        Leading IT training initiatives, mentoring staff on modern systems, and overseeing the seamless
+                        integration of upgraded MIS platforms while actively advancing personal AWS/Linux capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-700/50">
+                        <span
+                            class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent text-xs font-semibold rounded-md">AWS
+                            Cloud</span>
+                        <span
+                            class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent text-xs font-semibold rounded-md">Linux
+                            Admin</span>
+                        <span
+                            class="px-2.5 py-1 bg-brand-accent/10 text-brand-accent text-xs font-semibold rounded-md">IT
+                            Training</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era 2 -->
+            <div
+                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group hover:-translate-y-1 transition-transform duration-300">
+                <div
+                    class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-slate-600 bg-slate-800 text-slate-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-blue-400 group-hover:text-blue-400 group-hover:scale-110 transition-all">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                </div>
+                <div
+                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass p-6 rounded-2xl border border-slate-700 group-hover:border-blue-500/30 group-hover:shadow-[0_0_30px_rgba(59,130,246,0.1)] transition-all">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h3 class="font-bold text-xl text-white">Operations Manager</h3>
+                        <span
+                            class="text-slate-400 text-sm font-semibold group-hover:text-blue-400 transition-colors">2017
+                            – 2020</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4 text-sm">Hi-Tech Informatics (Client: HP Enterprise)</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Directed support operations for HP enterprise servers across the entirety of South India.
+                        Maintained strict SLA compliance, acted as the final escalation point for critical issues, and
+                        conducted regular technical training on cutting-edge hardware architectures.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-700/50">
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">HP
+                            Enterprise</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">SLA
+                            Management</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">Team
+                            Training</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era 1.5 -->
+            <div
+                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group hover:-translate-y-1 transition-transform duration-300">
+                <div
+                    class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-slate-600 bg-slate-800 text-slate-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-purple-400 group-hover:text-purple-400 group-hover:scale-110 transition-all">
+                    <i data-lucide="shield-alert" class="w-5 h-5"></i>
+                </div>
+                <div
+                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass p-6 rounded-2xl border border-slate-700 group-hover:border-purple-500/30 group-hover:shadow-[0_0_30px_rgba(168,85,247,0.1)] transition-all">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h3 class="font-bold text-xl text-white">Team Leader – Enterprise</h3>
+                        <span
+                            class="text-slate-400 text-sm font-semibold group-hover:text-purple-400 transition-colors">2016
+                            – 2017</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4 text-sm">Sysnet Global Technologies (Client: HP)</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Led a specialized team of 16 engineers handling complex server and storage infrastructure calls
+                        across Tamil Nadu. Provided high-level L2/L3 troubleshooting and successfully resolved highly
+                        escalated technical crises.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-700/50">
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">L2/L3
+                            Support</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">Storage
+                            Arrays</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">Team
+                            Leadership</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Era 1 -->
+            <div
+                class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group hover:-translate-y-1 transition-transform duration-300">
+                <div
+                    class="flex items-center justify-center w-10 h-10 rounded-full border-2 border-slate-600 bg-slate-800 text-slate-400 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10 group-hover:border-emerald-400 group-hover:text-emerald-400 group-hover:scale-110 transition-all">
+                    <i data-lucide="hard-drive" class="w-5 h-5"></i>
+                </div>
+                <div
+                    class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] glass p-6 rounded-2xl border border-slate-700 group-hover:border-emerald-500/30 group-hover:shadow-[0_0_30px_rgba(16,185,129,0.1)] transition-all">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center mb-2">
+                        <h3 class="font-bold text-xl text-white">Enterprise Support Engineer</h3>
+                        <span
+                            class="text-slate-400 text-sm font-semibold group-hover:text-emerald-400 transition-colors">2009
+                            – 2016</span>
+                    </div>
+                    <p class="text-slate-300 font-medium mb-4 text-sm">Nebula Computers / Maha Electronics</p>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        The physical foundation era. Executed onsite support, installation, and configuration of Dell
+                        and HP Blade Enclosures (C3000/C7000). Handled deep technical configurations including RAID
+                        levels, NIC teaming, VMware ESXi installations, and Linux/Windows deployments via ILO.
+                    </p>
+                    <div class="flex flex-wrap gap-2 pt-2 border-t border-slate-700/50">
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">Blade
+                            Servers</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">VMware
+                            ESXi</span>
+                        <span class="px-2.5 py-1 bg-slate-800 text-slate-300 text-xs font-semibold rounded-md">Hardware
+                            RAID</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Certifications & Education -->
+    <section class="py-20 bg-brand-dark/50 border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12">
+
+            <!-- Certifications -->
+            <div>
+                <h3 class="text-2xl font-heading font-bold text-white mb-6 flex items-center gap-2">
+                    <i data-lucide="award" class="text-brand-accent"></i> Certifications
+                </h3>
+                <div class="space-y-4">
+                    <div class="glass p-4 rounded-lg flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-brand-accent"></div>
+                        <div>
+                            <h4 class="text-white font-medium">Dell Certified Systems Expert (DCSE)</h4>
+                            <p class="text-sm text-slate-400">Enterprise Server Diagnostics & Support</p>
+                        </div>
+                    </div>
+                    <div class="glass p-4 rounded-lg flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-brand-accent"></div>
+                        <div>
+                            <h4 class="text-white font-medium">HP Certified Professional</h4>
+                            <p class="text-sm text-slate-400">Server & Storage Systems</p>
+                        </div>
+                    </div>
+                    <div class="glass p-4 rounded-lg flex items-start gap-4">
+                        <div class="mt-1 w-2 h-2 rounded-full bg-brand-accent"></div>
+                        <div>
+                            <h4 class="text-white font-medium">Microsoft Certified Professional</h4>
+                            <p class="text-sm text-slate-400">Windows XP & ACCEL Windows 2003 System Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <h3 class="text-2xl font-heading font-bold text-white mb-6 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="text-brand-accent"></i> Education
+                </h3>
+                <div class="space-y-4">
+                    <div class="glass p-5 rounded-lg border-l-4 border-brand-accent">
+                        <h4 class="text-white font-bold text-lg">Diploma in Computer Technology</h4>
+                        <p class="text-slate-400 text-sm mb-2">Dr. MGR Polytechnic College, Arni | First Class</p>
+                        <p class="text-xs text-slate-500">Graduated: 2000</p>
+                    </div>
+                    <div class="glass p-5 rounded-lg border-l-4 border-slate-600">
+                        <h4 class="text-white font-bold">Advanced Diploma</h4>
+                        <p class="text-slate-400 text-sm mb-2">Computer Maintenance & Network Admin</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Dedicated Contact Section -->
+    <section id="contact" class="scroll-mt-32 py-24 relative overflow-hidden">
+        <!-- Glow effect behind contact card -->
+        <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-brand-accent/20 blur-[100px] rounded-full pointer-events-none">
+        </div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div
+                class="glass border border-brand-accent/30 rounded-3xl p-8 md:p-12 text-center shadow-2xl shadow-cyan-900/20">
+                <div
+                    class="w-16 h-16 bg-brand-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6 text-brand-accent border border-brand-accent/30">
+                    <i data-lucide="mail-plus" class="w-8 h-8"></i>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mb-4">Ready to Upgrade Your
+                    Infrastructure?</h2>
+                <p class="text-slate-400 mb-8 max-w-2xl mx-auto text-lg">
+                    I am actively seeking new opportunities in Cloud Infrastructure, Linux Administration, and IT
+                    Operations Leadership. Let's discuss how my 15 years of experience can benefit your team.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-5">
+                    <a href="mailto:msun*****@gmail.com"
+                        class="bg-brand-accent hover:bg-cyan-400 text-slate-900 font-bold px-8 py-4 rounded-xl transition-all shadow-lg shadow-cyan-500/25 flex items-center justify-center gap-3 hover:-translate-y-1">
+                        <i data-lucide="send" class="w-5 h-5"></i> Email msun*****@gmail.com
+                    </a>
+                    <a href="https://linkedin.com/in/sundar-am" target="_blank"
+                        class="glass hover:bg-slate-700 text-white font-medium px-8 py-4 rounded-xl transition-all border border-slate-600 hover:border-brand-accent flex items-center justify-center gap-3 hover:-translate-y-1">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i> Connect on LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900 py-8 relative z-10">
+        <div class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center">
+            <div class="flex items-center gap-2 text-slate-400 mb-4 bg-slate-800 px-4 py-2 rounded-full text-sm">
+                <i data-lucide="map-pin" class="w-4 h-4 text-brand-accent"></i> Based in Chennai, India
+            </div>
+            <div class="text-slate-500 text-sm">
+                &copy; <span id="year"></span> M. Sundar. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Initialize Icons & Scripts -->
+    <script>
+        // Render Lucide Icons
+        lucide.createIcons();
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Active Navigation Highlight
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const indicator = document.getElementById('nav-indicator');
+            const navMenu = document.getElementById('nav-menu');
+
+            function updateNav(activeId) {
+                if (!indicator || !navMenu) return;
+
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href').substring(1);
+                    
+                    if (href === activeId) {
+                        // Position indicator
+                        indicator.style.width = `${link.offsetWidth}px`;
+                        // Need to calculate position relative to the navMenu container
+                        const leftPos = link.offsetLeft;
+                        indicator.style.transform = `translateX(${leftPos}px)`;
+                        indicator.style.opacity = '1';
+
+                        // Active styling
+                        link.classList.add('text-slate-900', 'font-bold');
+                        link.classList.remove('text-slate-300', 'hover:text-brand-accent', 'bg-brand-accent/10', 'border', 'border-brand-accent/50', 'text-brand-accent', 'hover:bg-brand-accent', 'hover:text-white');
+                    } else {
+                        // Inactive styling
+                        link.classList.remove('text-slate-900', 'font-bold');
+                        
+                        if (href === 'contact') {
+                            // Restore contact button special styling
+                            link.classList.add('bg-brand-accent/10', 'text-brand-accent', 'border', 'border-brand-accent/50', 'hover:bg-brand-accent', 'hover:text-white');
+                        } else {
+                            // Restore normal link styling
+                            link.classList.add('text-slate-300', 'hover:text-brand-accent');
+                        }
+                    }
+                });
+            }
+
+            const observerOptions = {
+                root: null,
+                // Offset triggers slightly above the middle of screen for better flow
+                rootMargin: '-20% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateNav(entry.target.getAttribute('id'));
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+
+            // Initial positioning on load
+            setTimeout(() => {
+                const scrollY = window.scrollY;
+                let currentSection = sections[0].getAttribute('id');
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    if (scrollY >= sectionTop - window.innerHeight / 3) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+                
+                updateNav(currentSection);
+            }, 100);
+            
+            // Re-calculate on window resize
+            window.addEventListener('resize', () => {
+                const activeLink = document.querySelector('.nav-link.text-slate-900');
+                if (activeLink) {
+                    const activeId = activeLink.getAttribute('href').substring(1);
+                    updateNav(activeId);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
